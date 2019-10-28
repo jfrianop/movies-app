@@ -1,10 +1,11 @@
 import React from 'react';
-import MovieList from '../components/MovieList';
+import Movie from '../components/Movie';
+import APIHandler from '../components/APIHandler';
 
 function Latest() {
   const category = "latest";
   return (
-    <MovieList category={category} />
+    <APIHandler category={category} render={data => <Movie data={data} />} />
   )
 }
 
